@@ -28,30 +28,59 @@
 
 
 
-class Laptop:
-    storage_type = "SSD"
+# class Laptop:
+#     storage_type = "SSD"
 
-    def __init__(self, RAM, storage):
-        self. RAM = RAM
-        self.storage = storage
+#     def __init__(self, RAM, storage):
+#         self. RAM = RAM
+#         self.storage = storage
 
-    @classmethod
-    def get_storage_type(cls):
-                print (f"storage type =  {cls.storage_type}")
+#     @classmethod
+#     def get_storage_type(cls):
+#                 print (f"storage type =  {cls.storage_type}")
 
-    def get_info(self):
-        print (f"latop has {self.RAM} RAM and {self.storage} {self.storage_type}")
+#     def get_info(self):
+#         print (f"latop has {self.RAM} RAM and {self.storage} {self.storage_type}")
 
-    @staticmethod
-    def calc_discount(price, discount):
-        final_price = price - (price*discount/100)
-        print(f"discount price = {final_price}")
+#     @staticmethod
+#     def calc_discount(price, discount):
+#         final_price = price - (price*discount/100)
+#         print(f"discount price = {final_price}")
           
 
-l1 = Laptop("16gb","512gb")               
-l2 = Laptop("8gb","256gb")
+# l1 = Laptop("16gb","512gb")               
+# l2 = Laptop("8gb","256gb")
 
-l1.get_info()
-l2.get_info()
-Laptop.get_storage_type()
-l1.calc_discount(40_000, 10)
+# l1.get_info()
+# l2.get_info()
+# Laptop.get_storage_type()
+# l1.calc_discount(40_000, 10)
+
+
+
+class store:
+    product_count = 0
+
+    def __init__(self, name, price):
+        self.name = name 
+        self.price = price
+        store.product_count += 1
+        
+
+    @staticmethod
+    def discount_price(price, discount):
+        print (f" discount price = {price - price*discount/100}")
+
+    @classmethod
+    def get_count(cls):
+        print (f"total product in store = {cls.product_count}") 
+
+p1 = store("laptop",40_000)
+p2 = store("phn",20_000)
+p3 = store("pc",20_0000)
+
+print (p1.name,p1.price)
+
+store.get_count()
+
+store.discount_price(p1.price, 10)
