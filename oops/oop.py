@@ -58,29 +58,51 @@
 
 
 
-class store:
-    product_count = 0
+# class store:
+#     product_count = 0
 
-    def __init__(self, name, price):
-        self.name = name 
-        self.price = price
-        store.product_count += 1
+#     def __init__(self, name, price):
+#         self.name = name 
+#         self.price = price
+#         store.product_count += 1
         
 
-    @staticmethod
-    def discount_price(price, discount):
-        print (f" discount price = {price - price*discount/100}")
+#     @staticmethod
+#     def discount_price(price, discount):
+#         print (f" discount price = {price - price*discount/100}")
 
-    @classmethod
-    def get_count(cls):
-        print (f"total product in store = {cls.product_count}") 
+#     @classmethod
+#     def get_count(cls):
+#         print (f"total product in store = {cls.product_count}") 
 
-p1 = store("laptop",40_000)
-p2 = store("phn",20_000)
-p3 = store("pc",20_0000)
+# p1 = store("laptop",40_000)
+# p2 = store("phn",20_000)
+# p3 = store("pc",20_0000)
 
-print (p1.name,p1.price)
+# print (p1.name,p1.price)
 
-store.get_count()
+# store.get_count()
 
-store.discount_price(p1.price, 10)
+# store.discount_price(p1.price, 10)
+
+
+
+
+class BankAccount:
+    def __init__(self, name, balance):
+
+        self.name =  name 
+        self.__balance = balance
+
+
+    def get_balance(self):
+            return self.__balance
+
+    def set_balance(self,new_balance):
+            self.__balance = new_balance
+
+acc1 = BankAccount("Nahin",20000)
+
+acc1.set_balance(400000)
+
+print (acc1.name, acc1.get_balance())
