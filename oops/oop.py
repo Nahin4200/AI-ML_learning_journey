@@ -88,21 +88,44 @@
 
 
 
-class BankAccount:
-    def __init__(self, name, balance):
+# class BankAccount:
+#     def __init__(self, name, balance):
 
-        self.name =  name 
-        self.__balance = balance
+#         self.name =  name 
+#         self.__balance = balance
 
 
-    def get_balance(self):
-            return self.__balance
+#     def get_balance(self):
+#             return self.__balance
 
-    def set_balance(self,new_balance):
-            self.__balance = new_balance
+#     def set_balance(self,new_balance):
+#             self.__balance = new_balance
 
-acc1 = BankAccount("Nahin",20000)
+# acc1 = BankAccount("Nahin",20000)
 
-acc1.set_balance(400000)
+# acc1.set_balance(400000)
 
-print (acc1.name, acc1.get_balance())
+# print (acc1.name, acc1.get_balance())
+
+
+
+
+#inheritance
+
+
+class employee:
+    start_time = "10am"
+    end_time = "6pm"
+
+    def change_time (self, new_end_time):
+        self.end_time = new_end_time
+
+
+class teacher (employee):
+    def __init__(self, subject):
+        self.subject = subject
+           
+t1 = teacher ("math")
+t1.change_time("5pm")
+
+print(t1.subject, t1.start_time, t1.end_time)
