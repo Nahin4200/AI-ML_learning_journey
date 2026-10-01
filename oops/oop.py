@@ -113,19 +113,65 @@
 #inheritance
 
 
-class employee:
-    start_time = "10am"
-    end_time = "6pm"
+# class employee:
+#     start_time = "10am"
+#     end_time = "6pm"
 
-    def change_time (self, new_end_time):
-        self.end_time = new_end_time
+#     def change_time (self, new_end_time):
+#         self.end_time = new_end_time
 
 
-class teacher (employee):
-    def __init__(self, subject):
-        self.subject = subject
+# class teacher (employee):
+#     def __init__(self, subject):
+#         self.subject = subject
            
-t1 = teacher ("math")
-t1.change_time("5pm")
+# t1 = teacher ("math")
+# t1.change_time("5pm")
 
-print(t1.subject, t1.start_time, t1.end_time)
+# print(t1.subject, t1.start_time, t1.end_time)
+
+
+
+
+
+# class employee:
+#     start_time = "10am"
+#     end_time = "6pm"
+
+# class adminstaff(employee):
+#     def __init__(self, role ):
+#         self.role = role
+
+# class accountant (adminstaff):
+#     def __init__(self, salary, role):
+#         super().__init__(role)
+#         self.salary = salary
+
+
+# acc1 = accountant(25_000,"CA") 
+
+# print (f"role is {acc1.role} salary is {acc1.salary} start time {acc1.start_time} end time {acc1.end_time}")
+
+
+
+
+
+class teacher:
+    def __init__(self, salary):
+        self.salary = salary
+
+class student:
+    def __init__(self, cgpa):
+        self.cgpa = cgpa
+
+class TA (teacher,student):
+    def __init__(self, salary, cgpa, name):
+        teacher.__init__(self,salary)
+        student.__init__(self, cgpa) 
+        self.name = name    
+
+
+ta1 = TA(15000, 3.9, "nahin")
+
+print (ta1.name, ta1.salary, ta1.cgpa)
+
