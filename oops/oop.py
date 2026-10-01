@@ -183,19 +183,63 @@
 
 
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Animal (ABC):
-    @abstractmethod
-    def make_sound(self):
-        pass
+# class Animal (ABC):
+#     @abstractmethod
+#     def make_sound(self):
+#         pass
 
-class lion(Animal): 
-    def make_sound(self):
-        print ("Roar!")
+# class lion(Animal): 
+#     def make_sound(self):
+#         print ("Roar!")
 
-l1 = lion()
-l1.make_sound()        
+# l1 = lion()
+# l1.make_sound()        
+
+
+
+
+
+#polymorphism
+
+
+
+# class employ:
+#     def get_designation(self):
+#         print ("employ")
+
+# class teracher (employ):
+#     def get_designation(self):
+#             print ("teacher")
+
+# t1 = teracher()
+# t1.get_designation()
+
+
+
+
+class employ:
+    def get_designation(self):
+        print ("employ")
+
+class teracher (employ):
+    def get_designation(self):
+            print ("teacher")
+
+
+t1 = teracher()
+t1.get_designation()
+
+e1 = employ()
+e1.get_designation()
+
+            
+
+
+
+    
+    
 
 
 
