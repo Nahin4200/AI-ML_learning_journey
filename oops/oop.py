@@ -156,22 +156,47 @@
 
 
 
-class teacher:
-    def __init__(self, salary):
-        self.salary = salary
+# class teacher:
+#     def __init__(self, salary):
+#         self.salary = salary
 
-class student:
-    def __init__(self, cgpa):
-        self.cgpa = cgpa
+# class student:
+#     def __init__(self, cgpa):
+#         self.cgpa = cgpa
 
-class TA (teacher,student):
-    def __init__(self, salary, cgpa, name):
-        teacher.__init__(self,salary)
-        student.__init__(self, cgpa) 
-        self.name = name    
+# class TA (teacher,student):
+#     def __init__(self, salary, cgpa, name):
+#         teacher.__init__(self,salary)
+#         student.__init__(self, cgpa) 
+#         self.name = name    
 
 
-ta1 = TA(15000, 3.9, "nahin")
+# ta1 = TA(15000, 3.9, "nahin")
+# print (ta1.name, ta1.salary, ta1.cgpa)
 
-print (ta1.name, ta1.salary, ta1.cgpa)
+
+
+
+
+#abstraction 
+
+
+
+
+from abc import ABC, abstractmethod
+
+class Animal (ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass
+
+class lion(Animal): 
+    def make_sound(self):
+        print ("Roar!")
+
+l1 = lion()
+l1.make_sound()        
+
+
+
 
