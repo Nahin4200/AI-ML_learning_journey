@@ -33,8 +33,26 @@
 
 # delete file
 
-import os
-os.remove("demo1.txt")
+# import os
+# os.remove("demo1.txt")
+
+
+
+
+
+data = True
+count = 1
+word = "java"
+
+with open("demo.txt", "r") as f:
+    while data:
+        data = f.readline()
+        if (word in data):
+            print (f"{word} found in line {count} ")
+            break
+        count +=1
+
+
 
 
 
